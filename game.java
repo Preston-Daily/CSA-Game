@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.io.*;
 import java.awt.BorderLayout;
 import java.awt.Font;
-
+import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
@@ -71,9 +71,6 @@ public class game
         System.out.println("=======================================================");
         System.out.println("\n");
         System.out.println("-------------------------------------------------------");
-        System.out.println("When progressing in the story, remember to first choose");
-        System.out.println("an object to interact with, then choose an action.");
-        System.out.println("");
         System.out.println("The commands that you can call at anytime include: ");
         System.out.println("-    '/health'");
         System.out.println("-    '/armour'");
@@ -116,11 +113,18 @@ public class game
         String first_choice = user_input.next();
         
         
+        String lowerFirst = first_choice.toLowerCase();  
         
-
+        ArrayList applicable = new ArrayList()
         
         
-        
-    
+        for (Arr applicable);
+        applicable.add("walk");
+            if (applicable.toLowerCase().contains(lowerFirst))
+            {
+                System.out.println("");
+                System.out.println("You journey down the hallway.");
+            }
+        }
     }
 }
