@@ -1,19 +1,19 @@
 #BlueJ package file
 objectbench.height=76
-objectbench.width=658
+objectbench.width=327
 package.editor.height=373
-package.editor.width=560
-package.editor.x=248
-package.editor.y=267
+package.editor.width=229
+package.editor.x=782
+package.editor.y=60
 package.numDependencies=0
 package.numTargets=1
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
-target1.editor.height=978
-target1.editor.width=1003
-target1.editor.x=723
-target1.editor.y=63
+target1.editor.height=867
+target1.editor.width=734
+target1.editor.x=-7
+target1.editor.y=0
 target1.height=50
 target1.name=game
 target1.naviview.expanded=true

@@ -1,4 +1,6 @@
 #BlueJ class context
-comment0.params=
-comment0.target=void\ main()
-numComments=1
+comment0.params=time
+comment0.target=void\ wait(int)
+comment1.params=
+comment1.target=void\ main()
+numComments=2
