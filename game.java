@@ -17,7 +17,15 @@ public class game
            
         }
     }
-    public  void main(){
+    public static void pathHallway(){
+        System.out.println("Standing in front of the door, the light seems to increasingly grow in brightness.");
+        System.out.println("(remember to check your inventory)");
+        
+        //String second1 = user_input.next();
+    
+        
+    }
+    public void main(){
         Scanner user_input = new Scanner(System.in);
         
         wait(750);
@@ -101,25 +109,9 @@ public class game
         System.out.println("D:::::::::::::::DD  A:::::A               A:::::A  W:::::W         W:::::W            N::::::N       N:::::::N");
         System.out.println("D::::::::::::DDD   A:::::A                 A:::::A  W:::W           W:::W             N::::::N        N::::::N");
         System.out.println("DDDDDDDDDDDDD     AAAAAAA                   AAAAAAA  WWW             WWW              NNNNNNNN         NNNNNNN");
-                                                                                                        
-                                                                                                        
-                                                                                                        
-                                                                                                        
-                                                                                                        
-                                                                                                        
-                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
         System.out.println("");
         
-     
-        
-        
-        
-
-
-
-
-           
-           
         System.out.println("=======================================================");
         System.out.println("############## Created by: Preston Daily ##############");
         System.out.println("=======================================================");
@@ -134,13 +126,10 @@ public class game
         System.out.println("");
         System.out.println("\n");
         
-        
-        
         System.out.println("Type your name: ");
         String user_name = user_input.next();
         System.out.println("");
-        
-        
+                
         System.out.print("Storing");
         wait(400);
         System.out.print(".");
@@ -302,10 +291,31 @@ public class game
         
         
         
+        String first_choice = user_input.next();
+       
+        String lowerFirst = first_choice.toLowerCase();  
+        
+        String first1 = "corridor";
+        String first2 = "corridor";
+        
+        if (first1.toLowerCase().equals(lowerFirst))
+        {
+            System.out.println("");
+            System.out.println("You journey down the hallway.");
+                
+        }
+        else if (first2.toLowerCase().equals(lowerFirst)){
+            System.out.println("");
+            System.out.println("You journey down the hallway.");
+            pathHallway();
+        }
+    }
         
         
         
         
+        
+        /*
         String text = user_input.next();
         
 
@@ -321,7 +331,7 @@ public class game
                 System.out.println(matcher.group(1));
         }
        
-        /*
+        
         String first1 = "hallway";
         String first2 = "walk";
         String first3 = "corridor";
@@ -336,4 +346,3 @@ public class game
         }
         */
     }
-}
