@@ -57,23 +57,79 @@ public class game
         //new page break-----------------------
 
         
-        System.out.println("\n");
+        
+        
+                                                                                                     
+        System.out.println("PPPPPPPPPPPPPPPPP           AAA                    SSSSSSSSSSSSSSS    TTTTTTTTTTTTTTTTTTTTTTT");                   
+        System.out.println("P::::::::::::::::P         A:::A                 SS:::::::::::::::S   T:::::::::::::::::::::T");                    
+        System.out.println("P::::::PPPPPP:::::P       A:::::A               S:::::SSSSSS::::::S   T:::::::::::::::::::::T");                    
+        System.out.println("PP:::::P     P:::::P     A:::::::A              S:::::S     SSSSSSS   T:::::TT:::::::TT:::::T");                    
+        System.out.println("  P::::P     P:::::P    A:::::::::A             S:::::S               TTTTTT  T:::::T  TTTTTT");                    
+        System.out.println("  P::::P     P:::::P   A:::::A:::::A            S:::::S                       T:::::T");                            
+        System.out.println("  P::::PPPPPP:::::P   A:::::A A:::::A            S::::SSSS                    T:::::T");                           
+        System.out.println("  P:::::::::::::PP   A:::::A   A:::::A            SS::::::SSSSS               T:::::T");                            
+        System.out.println("  P::::PPPPPPPPP    A:::::A     A:::::A             SSS::::::::SS             T:::::T ");                           
+        System.out.println("  P::::P           A:::::AAAAAAAAA:::::A               SSSSSS::::S            T:::::T");                            
+        System.out.println("  P::::P          A:::::::::::::::::::::A                   S:::::S           T:::::T");                            
+        System.out.println("  P::::P         A:::::AAAAAAAAAAAAA:::::A                  S:::::S           T:::::T");                            
+        System.out.println("PP::::::PP      A:::::A             A:::::A     SSSSSSS     S:::::S         TT:::::::TT");                          
+        System.out.println("P::::::::P     A:::::A               A:::::A    S::::::SSSSSS:::::S         T:::::::::T");                         
+        System.out.println("P::::::::P    A:::::A                 A:::::A   S:::::::::::::::SS          T:::::::::T");                          
+        System.out.println("PPPPPPPPPP   AAAAAAA                   AAAAAAA   SSSSSSSSSSSSSSS            TTTTTTTTTTT");                          
+                                                                                                        
+                                                                                                        
+                                                                                                        
+                                                                                                        
+                                                                                                        
+                                                                                                        
+                                                                                                        
+                                                                                                        
+                                                                                                        
+        System.out.println("DDDDDDDDDDDDD                    AAA     WWWWWWWW                           WWWWWWWW  NNNNNNNN        NNNNNNNN");
+        System.out.println("D::::::::::::DDD                A:::A    W::::::W                           W::::::W  N:::::::N       N::::::N");
+        System.out.println("D:::::::::::::::DD             A:::::A   W::::::W                           W::::::W  N::::::::N      N::::::N");
+        System.out.println("DDD:::::DDDDD:::::D           A:::::::A  W::::::W                           W::::::W  N:::::::::N     N::::::N");
+        System.out.println(" D:::::D    D:::::D          A:::::::::A  W:::::W           WWWWW           W:::::W   N::::::::::N    N::::::N");
+        System.out.println(" D:::::D     D:::::D        A:::::A:::::A  W:::::W         W:::::W         W:::::W    N:::::::::::N   N::::::N");
+        System.out.println(" D:::::D     D:::::D       A:::::A A:::::A  W:::::W       W:::::::W       W:::::W     N:::::::N::::N  N::::::N");
+        System.out.println(" D:::::D     D:::::D      A:::::A   A:::::A  W:::::W     W:::::::::W     W:::::W      N::::::N N::::N N::::::N");
+        System.out.println(" D:::::D     D:::::D     A:::::A     A:::::A  W:::::W   W:::::W:::::W   W:::::W       N::::::N  N::::N:::::::N");
+        System.out.println(" D:::::D     D:::::D    A:::::AAAAAAAAA:::::A  W:::::W W:::::W W:::::W W:::::W        N::::::N   N:::::::::::N");
+        System.out.println(" D:::::D     D:::::D   A:::::::::::::::::::::A  W:::::W:::::W   W:::::W:::::W         N::::::N    N::::::::::N");
+        System.out.println(" D:::::D    D:::::D   A:::::AAAAAAAAAAAAA:::::A  W:::::::::W     W:::::::::W          N::::::N     N:::::::::N");
+        System.out.println("DDD:::::DDDDD:::::D  A:::::A             A:::::A  W:::::::W       W:::::::W           N::::::N      N::::::::N");
+        System.out.println("D:::::::::::::::DD  A:::::A               A:::::A  W:::::W         W:::::W            N::::::N       N:::::::N");
+        System.out.println("D::::::::::::DDD   A:::::A                 A:::::A  W:::W           W:::W             N::::::N        N::::::N");
+        System.out.println("DDDDDDDDDDDDD     AAAAAAA                   AAAAAAA  WWW             WWW              NNNNNNNN         NNNNNNN");
+                                                                                                        
+                                                                                                        
+                                                                                                        
+                                                                                                        
+                                                                                                        
+                                                                                                        
+                                                                                                        
+        System.out.println("");
+        
+     
+        
+        
+        
+
+
+
+
+           
+           
         System.out.println("=======================================================");
-        System.out.println("#######################################################");
-        System.out.println("#######################################################");
-        System.out.println("##################### PAST DAWN #######################");
-        System.out.println("#######################################################");
-        System.out.println("################ Created by Daily Inc. ################");
-        System.out.println("#######################################################");
-        System.out.println("#######################################################");
+        System.out.println("############## Created by: Preston Daily ##############");
         System.out.println("=======================================================");
-        System.out.println("\n");
+        System.out.println("");
         System.out.println("-------------------------------------------------------");
-        System.out.println("");
         System.out.println("To check your current game stats such as health,");
-        System.out.println("armour, and inventory, use the following command.");
-        System.out.println("-  '/stats'");
-        System.out.println("");
+        System.out.println("armour, and inventory, use the following commands.");
+        System.out.println(" '/health'");
+        System.out.println(" '/armour'");
+        System.out.println(" '/inventory'");
         System.out.println("-------------------------------------------------------");
         System.out.println("");
         System.out.println("\n");
@@ -137,7 +193,7 @@ public class game
         System.out.println("remember the past.");
         wait(6000);
         System.out.println("");
-        System.out.println("    Finding yourself in a cold,");
+        System.out.println("Finding yourself in a cold,");
         System.out.println("dark, and rather damp corridor.");
         System.out.println("The only visible light, permiates from");
         System.out.println("a door several paces away.");
@@ -250,19 +306,34 @@ public class game
         
         
         
-        String first_choice = user_input.next();
-       
-        String lowerFirst = first_choice.toLowerCase();  
+        String text = user_input.next();
         
-        String[] first_answer = {"hallway", "walk"};
-        for (String s: first_answer)
-        {
-            if (s.toLowerCase().contains(lowerFirst))
-            {
-                System.out.println("");
-                System.out.println("You journey down the hallway.");
-                
-            }
+
+        List<String> tokens = new ArrayList<String>();
+        tokens.add("walk");
+        tokens.add("corridor");
+
+        String patternString = "\\b(" + StringUtils.join(tokens, "|") + ")\\b";
+        Pattern pattern = Pattern.compile(patternString);
+        Matcher matcher = pattern.matcher(text);
+
+        while (matcher.find()) {
+                System.out.println(matcher.group(1));
         }
+       
+        /*
+        String first1 = "hallway";
+        String first2 = "walk";
+        String first3 = "corridor";
+        
+        
+        
+        if (((first_choice.toLowerCase()).indexOf(first1.toLowerCase()) != -1) || ((first_choice.toLowerCase()).indexOf(first2.toLowerCase()) != -1) || ((first_choice.toLowerCase()).indexOf(first3.toLowerCase()) != -1))
+        {
+            System.out.println("");
+            System.out.println("You journey down the hallway.");
+                
+        }
+        */
     }
 }
