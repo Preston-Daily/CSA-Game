@@ -65,25 +65,41 @@ public class game
         //new page break-----------------------
 
         
-        
+        wait(70);
         
                                                                                                      
-        System.out.println("PPPPPPPPPPPPPPPPP           AAA                    SSSSSSSSSSSSSSS    TTTTTTTTTTTTTTTTTTTTTTT");                   
-        System.out.println("P::::::::::::::::P         A:::A                 SS:::::::::::::::S   T:::::::::::::::::::::T");                    
-        System.out.println("P::::::PPPPPP:::::P       A:::::A               S:::::SSSSSS::::::S   T:::::::::::::::::::::T");                    
-        System.out.println("PP:::::P     P:::::P     A:::::::A              S:::::S     SSSSSSS   T:::::TT:::::::TT:::::T");                    
-        System.out.println("  P::::P     P:::::P    A:::::::::A             S:::::S               TTTTTT  T:::::T  TTTTTT");                    
-        System.out.println("  P::::P     P:::::P   A:::::A:::::A            S:::::S                       T:::::T");                            
-        System.out.println("  P::::PPPPPP:::::P   A:::::A A:::::A            S::::SSSS                    T:::::T");                           
-        System.out.println("  P:::::::::::::PP   A:::::A   A:::::A            SS::::::SSSSS               T:::::T");                            
-        System.out.println("  P::::PPPPPPPPP    A:::::A     A:::::A             SSS::::::::SS             T:::::T ");                           
-        System.out.println("  P::::P           A:::::AAAAAAAAA:::::A               SSSSSS::::S            T:::::T");                            
-        System.out.println("  P::::P          A:::::::::::::::::::::A                   S:::::S           T:::::T");                            
-        System.out.println("  P::::P         A:::::AAAAAAAAAAAAA:::::A                  S:::::S           T:::::T");                            
-        System.out.println("PP::::::PP      A:::::A             A:::::A     SSSSSSS     S:::::S         TT:::::::TT");                          
-        System.out.println("P::::::::P     A:::::A               A:::::A    S::::::SSSSSS:::::S         T:::::::::T");                         
-        System.out.println("P::::::::P    A:::::A                 A:::::A   S:::::::::::::::SS          T:::::::::T");                          
-        System.out.println("PPPPPPPPPP   AAAAAAA                   AAAAAAA   SSSSSSSSSSSSSSS            TTTTTTTTTTT");                          
+        System.out.println("PPPPPPPPPPPPPPPPP           AAA                    SSSSSSSSSSSSSSS    TTTTTTTTTTTTTTTTTTTTTTT"); 
+        wait(70);
+        System.out.println("P::::::::::::::::P         A:::A                 SS:::::::::::::::S   T:::::::::::::::::::::T");    
+        wait(70);
+        System.out.println("P::::::PPPPPP:::::P       A:::::A               S:::::SSSSSS::::::S   T:::::::::::::::::::::T"); 
+        wait(70);
+        System.out.println("PP:::::P     P:::::P     A:::::::A              S:::::S     SSSSSSS   T:::::TT:::::::TT:::::T");   
+        wait(70);
+        System.out.println("  P::::P     P:::::P    A:::::::::A             S:::::S               TTTTTT  T:::::T  TTTTTT"); 
+        wait(70);
+        System.out.println("  P::::P     P:::::P   A:::::A:::::A            S:::::S                       T:::::T");     
+        wait(70);
+        System.out.println("  P::::PPPPPP:::::P   A:::::A A:::::A            S::::SSSS                    T:::::T");   
+        wait(70);
+        System.out.println("  P:::::::::::::PP   A:::::A   A:::::A            SS::::::SSSSS               T:::::T");   
+        wait(70);
+        System.out.println("  P::::PPPPPPPPP    A:::::A     A:::::A             SSS::::::::SS             T:::::T ");  
+        wait(70);
+        System.out.println("  P::::P           A:::::AAAAAAAAA:::::A               SSSSSS::::S            T:::::T");  
+        wait(70);
+        System.out.println("  P::::P          A:::::::::::::::::::::A                   S:::::S           T:::::T");  
+        wait(70);
+        System.out.println("  P::::P         A:::::AAAAAAAAAAAAA:::::A                  S:::::S           T:::::T");   
+        wait(70);
+        System.out.println("PP::::::PP      A:::::A             A:::::A     SSSSSSS     S:::::S         TT:::::::TT");  
+        wait(70);
+        System.out.println("P::::::::P     A:::::A               A:::::A    S::::::SSSSSS:::::S         T:::::::::T");   
+        wait(70);
+        System.out.println("P::::::::P    A:::::A                 A:::::A   S:::::::::::::::SS          T:::::::::T");  
+        wait(70);
+        System.out.println("PPPPPPPPPP   AAAAAAA                   AAAAAAA   SSSSSSSSSSSSSSS            TTTTTTTTTTT");  
+        wait(70);
                                                                                                         
                                                                                                         
                                                                                                         
@@ -91,41 +107,69 @@ public class game
                                                                                                         
                                                                                                         
                                                                                                         
-                                                                                                        
-                                                                                                        
+                                                                                                                                                                                                      
         System.out.println("DDDDDDDDDDDDD                    AAA     WWWWWWWW                           WWWWWWWW  NNNNNNNN        NNNNNNNN");
+        wait(70);
         System.out.println("D::::::::::::DDD                A:::A    W::::::W                           W::::::W  N:::::::N       N::::::N");
+        wait(70);
         System.out.println("D:::::::::::::::DD             A:::::A   W::::::W                           W::::::W  N::::::::N      N::::::N");
+        wait(70);
         System.out.println("DDD:::::DDDDD:::::D           A:::::::A  W::::::W                           W::::::W  N:::::::::N     N::::::N");
+        wait(70);
         System.out.println(" D:::::D    D:::::D          A:::::::::A  W:::::W           WWWWW           W:::::W   N::::::::::N    N::::::N");
+        wait(70);
         System.out.println(" D:::::D     D:::::D        A:::::A:::::A  W:::::W         W:::::W         W:::::W    N:::::::::::N   N::::::N");
+        wait(70);
         System.out.println(" D:::::D     D:::::D       A:::::A A:::::A  W:::::W       W:::::::W       W:::::W     N:::::::N::::N  N::::::N");
+        wait(70);
         System.out.println(" D:::::D     D:::::D      A:::::A   A:::::A  W:::::W     W:::::::::W     W:::::W      N::::::N N::::N N::::::N");
+        wait(70);
         System.out.println(" D:::::D     D:::::D     A:::::A     A:::::A  W:::::W   W:::::W:::::W   W:::::W       N::::::N  N::::N:::::::N");
+        wait(70);
         System.out.println(" D:::::D     D:::::D    A:::::AAAAAAAAA:::::A  W:::::W W:::::W W:::::W W:::::W        N::::::N   N:::::::::::N");
+        wait(70);
         System.out.println(" D:::::D     D:::::D   A:::::::::::::::::::::A  W:::::W:::::W   W:::::W:::::W         N::::::N    N::::::::::N");
+        wait(70);
         System.out.println(" D:::::D    D:::::D   A:::::AAAAAAAAAAAAA:::::A  W:::::::::W     W:::::::::W          N::::::N     N:::::::::N");
+        wait(70);
         System.out.println("DDD:::::DDDDD:::::D  A:::::A             A:::::A  W:::::::W       W:::::::W           N::::::N      N::::::::N");
+        wait(70);
         System.out.println("D:::::::::::::::DD  A:::::A               A:::::A  W:::::W         W:::::W            N::::::N       N:::::::N");
+        wait(70);
         System.out.println("D::::::::::::DDD   A:::::A                 A:::::A  W:::W           W:::W             N::::::N        N::::::N");
+        wait(70);
         System.out.println("DDDDDDDDDDDDD     AAAAAAA                   AAAAAAA  WWW             WWW              NNNNNNNN         NNNNNNN");
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-        System.out.println("");
+        wait(70);
         
+        System.out.println("");
+        wait(70);
         System.out.println("=======================================================");
+        wait(70);
         System.out.println("############## Created by: Preston Daily ##############");
+        wait(70);
         System.out.println("=======================================================");
-        System.out.println("");
-        System.out.println("-------------------------------------------------------");
-        System.out.println("To check your current game stats such as health,");
-        System.out.println("armour, and inventory, use the following commands.");
-        System.out.println(" '/health'");
-        System.out.println(" '/armour'");
-        System.out.println(" '/inventory'");
-        System.out.println("-------------------------------------------------------");
-        System.out.println("");
-        System.out.println("\n");
+        wait(70);
         
+        System.out.println("");
+        wait(70);
+        System.out.println("-------------------------------------------------------");
+        wait(70);
+        System.out.println("To check your current game stats such as health,");
+        wait(70);
+        System.out.println("armour, and inventory, use the following commands.");
+        wait(70);
+        System.out.println(" '/health'");
+        wait(70);
+        System.out.println(" '/armour'");
+        wait(70);
+        System.out.println(" '/inventory'");
+        wait(70);
+        System.out.println("-------------------------------------------------------");
+        wait(70);
+        System.out.println("");
+        wait(70);
+        System.out.println("\n");
+        wait(70);
         System.out.println("Type your name: ");
         String user_name = user_input.next();
         System.out.println("");
@@ -221,6 +265,9 @@ public class game
                 System.out.print(health + "/100");
                 System.out.println("");
                 System.out.println("--------------------------------------------------");
+                System.out.println("");
+                
+                lowerCheck = (user_input.next()).toLowerCase();
             }
         }
         
@@ -242,6 +289,9 @@ public class game
                 System.out.print(armour + "/10");
                 System.out.println("");
                 System.out.println("--------------------------------------------------");
+                System.out.println("");
+                
+                lowerCheck = (user_input.next()).toLowerCase();
             }
         }
         
@@ -275,6 +325,8 @@ public class game
                 System.out.println("");
                 System.out.println("-------------------------------------------------");
                 System.out.println("");
+                
+                lowerCheck = (user_input.next()).toLowerCase();
             }
         }
         
