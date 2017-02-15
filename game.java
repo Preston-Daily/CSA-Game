@@ -198,6 +198,17 @@ public class game
         System.out.println("");
         
         
+        if (user_gender.equals("toaster")){
+            
+            System.out.println("");
+            System.out.println("");
+            System.out.println("Wow you are a toaster?");
+            System.out.println("");
+            System.out.println("");
+        }
+        
+        
+        
         System.out.print("Storing");
         wait(400);
         System.out.print(".");
@@ -220,18 +231,31 @@ public class game
         }    
         
         System.out.println("You awake...");
+        wait(170);
         System.out.println("Attempting to recollect");
+        wait(170);
         System.out.println("your thoughts, you panic in");
+        wait(170);
         System.out.println("the realization that you cannot");
+        wait(170);
         System.out.println("remember the past.");
+        
         wait(6000);
+        
         System.out.println("");
+        wait(170);
         System.out.println("Finding yourself in a cold,");
+        wait(170);
         System.out.println("dark, and rather damp corridor.");
+        wait(170);
         System.out.println("The only visible light, permiates from");
+        wait(170);
         System.out.println("a door several paces away.");
+        wait(170);
         System.out.println("You notice a crate next to you.");
+        wait(170);
         System.out.println("It is emitting a strange sound.");
+        
         wait(7200);
         System.out.println("");
         System.out.println("");
@@ -243,9 +267,9 @@ public class game
         
         // STAT CHECK
         
-        String stat_check = user_input.next();
+        //String stat_check = user_input.next();
        
-        String lowerCheck = stat_check.toLowerCase();  
+        String lowerCheck = user_input.next().toLowerCase();  
         
         
         
@@ -343,20 +367,23 @@ public class game
         
         
         
-        String first_choice = user_input.next();
+        //String first_choice = user_input.next();
        
-        String lowerFirst = first_choice.toLowerCase();  
+        lowerCheck = user_input.next().toLowerCase();  
         
-        String first1 = "corridor";
-        String first2 = "corridor";
+        String first1 = lowerCheck.indexOf("corridor");
+        String first2 = "hallway";
         
-        if (first1.toLowerCase().equals(lowerFirst))
+        
+        
+        
+        if (lowerCheck.equals(first1))
         {
             System.out.println("");
-            System.out.println("You journey down the hallway.");
-                
+            System.out.println("You journey down the corridor.");
+            pathHallway();    
         }
-        else if (first2.toLowerCase().equals(lowerFirst)){
+        else if (lowerCheck.contains("hallway")){
             System.out.println("");
             System.out.println("You journey down the hallway.");
             pathHallway();
