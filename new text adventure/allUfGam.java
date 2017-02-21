@@ -9,7 +9,9 @@ import javax.swing.JFrame;
 public class allUfGam{
 
     Scanner user_input = new Scanner(System.in);
-    
+    int hit = 20;
+    int weakplayerDamage = 20;
+    int playerDamage = 40;
     int itemAmount = 2;
     int playerAmbushed = 0;
     public void health(int addedhealth){
@@ -654,25 +656,19 @@ public class allUfGam{
                     System.out.println("========================================================================");
                 }    
                 //new question break-----------------------
-                System.out.println("");
-                System.out.println("");
-                System.out.println("(What would you like to shout?)");
-                String shouted = user_input.next();
+                
+                
                 wait(1200);
                 System.out.println("");
                 System.out.println("");
                 System.out.println("You shout at the top of your lungs,");
-                System.out.println("'" + (shouted) + "'..(* BAM! *)");
-                wait(2000);
+                System.out.println("'" + "Hello?!" + "'..(* BAM! *)");
+                wait(1000);
                 System.out.println("(your shouting is cut short)");
                 wait(2500);
-                System.out.print(".");
-                wait(1000);
-                System.out.print(".");
-                wait(1000);
-                System.out.print(".");
-                wait(1000);
-                System.out.print("you get no reply.");
+                System.out.print("...you get no reply.");
+                System.out.println("");
+                wait(2000);
                 
                 
                 openDoorOrSearch();
@@ -735,26 +731,28 @@ public class allUfGam{
 
     }
     public void openDoorOrSearch(){
+        
         System.out.println("");
         System.out.println("");
         System.out.println("Forcefully 'open' the door?");
         System.out.println("Or 'search' for a weapon?");
+        System.out.println("");
                 
-                
+        
         String[] sixthOption = {"open"};
         String[] altsixthOption = {"search"};
-        
+     
         String sixthChoice = user_input.next();
                 
-        for (String c: sixthOption){
-            if (c.toLowerCase().contains(sixthChoice)){
+        for (String a: sixthOption){
+            if (a.toLowerCase().contains(sixthChoice)){
                         
                 oppeningDoorVinilla();
                             
             }
                 }
-        for (String d: altsixthOption){
-            if (d.toLowerCase().contains(sixthChoice)){
+        for (String b: altsixthOption){
+            if (b.toLowerCase().contains(sixthChoice)){
                         
                 searchingBeforeDoor1();
                             
@@ -883,19 +881,83 @@ public class allUfGam{
     }            
    
     public void creatureAttacking(){
-        wait(2500);
+        for (int i = 100; i > 0;){
+            System.out.println("Do you 'block' its attack?");
+            System.out.println("Or do you 'attack' it?");
+            String combatChoice = user_input.next();
+            if ((combatChoice).equals("block")){
+                System.out.println("You block the creatures");
+                System.out.println("attack leaving it vunruble.");
+                System.out.println("");
+                System.out.println("Do you 'attack'?");
+                String combatFromBlock = user_input.next();
+                if ((combatFromBlock).equals("attack")){
+                    System.out.println("You attack the creature");
+                    System.out.println("dealing " + weakplayerDamage + " damage.");
+                    System.out.println("");
+                }
+            } else if ((combatChoice).equals("attack")){
+                System.out.println("You attack the creature");
+                System.out.println("and the creature attacks you!");
+                System.out.println("You deal " + weakplayerDamage + " damage!");
+                System.out.println("You loose " + hit + " health!");
+                System.out.println("");
+            }
+            i = i - weakplayerDamage;
+            System.out.println("The creature is now on " + i + " health");
+            wait(4500);
+            System.out.println("");
+            System.out.println("");
+            System.out.println("The creature again starts to attack.");
+        }
+        for(int i = 0; i < 50; i++){
+            System.out.println("\n");
+        }
         
-        System.out.println("\n");
-        System.out.println("\n");
-        health(0);
-        System.out.println("\n");
-        System.out.println("\n");
-        
-        System.out.println("The humanoid on your left");
-        System.out.println("is now attacking you!");
+       
         System.out.println("");
-        System.out.println("\n");
-    
+        System.out.println("");
+        System.out.println("The creature to your left");
+        System.out.println("now begins to attack you!");
+        wait(4500);
+        System.out.println("");
+        
+        
+        for (int i = 100; i > 0;){
+            System.out.println("Do you 'block' its attack?");
+            System.out.println("Or do you 'attack' it?");
+            String combatChoice = user_input.next();
+            if ((combatChoice).equals("block")){
+                System.out.println("You block the creatures");
+                System.out.println("attack leaving it vunruble.");
+                System.out.println("");
+                System.out.println("Do you 'attack'?");
+                String combatFromBlock = user_input.next();
+                if ((combatFromBlock).equals("attack")){
+                    System.out.println("You attack the creature");
+                    System.out.println("dealing " + weakplayerDamage + " damage.");
+                    System.out.println("");
+                }
+            } else if ((combatChoice).equals("attack")){
+                System.out.println("You attack the creature");
+                System.out.println("and the creature attacks you!");
+                System.out.println("You deal " + weakplayerDamage + " damage!");
+                System.out.println("You loose " + hit + " health!");
+                System.out.println("");
+            }
+            i = i - weakplayerDamage;
+            System.out.println("The creature is now on " + i + " health");
+            wait(4500);
+            System.out.println("");
+            System.out.println("");
+            System.out.println("The creature again starts to attack.");
+        }
+        for(int i = 0; i < 50; i++){
+            System.out.println("\n");
+        }
+        
+        youWin();
+        
     }
     
     
@@ -940,7 +1002,7 @@ public class allUfGam{
                 System.out.println("");
                 
                 
-                searchedfightSequence(100, 3);
+                combatHumanoids();
                 
                 
             }
@@ -967,19 +1029,99 @@ public class allUfGam{
                 System.out.println("");
                 System.out.println("");
                 System.out.println("Startling two humanoid");
-                System.out.println("creatures the begin to attack");
+                System.out.println("creatures they begin to pursue");
                 System.out.println("you with their bare fists!");
                 System.out.println("");
                 System.out.println("");
+                System.out.println("The creature on your right");
+                System.out.println("begins to swing!");
+                System.out.println("");
+        
                 
                 
-                youWin();
+                combatHumanoids();
                 
                 
             }
         }
     }
-    
+    public void combatHumanoids(){
+        for (int i = 100; i > 0;){
+            System.out.println("Do you 'block' its attack?");
+            System.out.println("Or do you 'attack' it?");
+            String combatChoice = user_input.next();
+            if ((combatChoice).equals("block")){
+                System.out.println("You block the creatures");
+                System.out.println("attack leaving it vunruble.");
+                System.out.println("");
+                System.out.println("Do you 'attack'?");
+                String combatFromBlock = user_input.next();
+                if ((combatFromBlock).equals("attack")){
+                    System.out.println("You attack the creature");
+                    System.out.println("dealing " + playerDamage + " damage.");
+                    System.out.println("");
+                }
+            } else if ((combatChoice).equals("attack")){
+                System.out.println("You attack the creature");
+                System.out.println("and the creature attacks you!");
+                System.out.println("You deal " + playerDamage + " damage!");
+                System.out.println("You loose " + hit + " health!");
+                System.out.println("");
+            }
+            i = i - playerDamage;
+            System.out.println("The creature is now on " + i + " health");
+            wait(4500);
+            System.out.println("");
+            System.out.println("");
+            System.out.println("The creature again starts to attack.");
+        }
+        
+        for(int i = 0; i < 50; i++){
+            System.out.println("\n");
+        }
+        
+       
+        System.out.println("");
+        System.out.println("");
+        System.out.println("The creature to your left");
+        System.out.println("now begins to attack you!");
+        wait(4500);
+        System.out.println("");
+        
+        for (int i = 100; i > 0;){
+            System.out.println("Do you 'block' its attack?");
+            System.out.println("Or do you 'attack' it?");
+            String combatChoice = user_input.next();
+            if ((combatChoice).equals("block")){
+                System.out.println("You block the creatures");
+                System.out.println("attack leaving it vunruble.");
+                System.out.println("");
+                System.out.println("Do you 'attack'?");
+                String combatFromBlock = user_input.next();
+                if ((combatFromBlock).equals("attack")){
+                    System.out.println("You attack the creature");
+                    System.out.println("dealing " + playerDamage + " damage.");
+                    System.out.println("");
+                }
+            } else if ((combatChoice).equals("attack")){
+                System.out.println("You attack the creature");
+                System.out.println("and the creature attacks you!");
+                System.out.println("You deal " + playerDamage + " damage!");
+                System.out.println("You loose " + hit + " health!");
+                System.out.println("");
+            }
+            i = i - playerDamage;
+            System.out.println("The creature is now on " + i + " health");
+            wait(4500);
+            System.out.println("");
+            System.out.println("");
+            System.out.println("The creature again starts to attack.");
+        }
+        for(int i = 0; i < 50; i++){
+            System.out.println("\n");
+        }
+        youWin();
+    }
     
     public void youWin(){
         System.out.println("\n");
