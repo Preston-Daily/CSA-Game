@@ -25,7 +25,15 @@ public class game
     
         
     }
-    public void main(){
+    public void pathOpenCrate(){
+        System.out.println("The crate is opened... ");
+        System.out.println(" ");
+        wait(1200);
+        System.out.println("Curiosity killed the cat.");
+    
+    
+    }
+    public void START_GAME(){
         Scanner user_input = new Scanner(System.in);
         
         wait(750);
@@ -257,9 +265,9 @@ public class game
         System.out.println("It is emitting a strange sound.");
         
         wait(7200);
-        System.out.println("");
-        System.out.println("");
-        System.out.println("What do you do?");
+        System.out.println("\n");
+        
+        System.out.println("Do you go down the 'corridor'? Or inspect the 'crate'?");
         
         
         
@@ -341,7 +349,7 @@ public class game
     
                 for (int i = 0; i <= (itemAmount - 1); i++){
         
-                    System.out.println(inventory[i]);
+                    System.out.print(inventory[i]);
         
                 }
                 // =======================End=========================
@@ -362,66 +370,54 @@ public class game
         
         
         
+        /*
+        String first_choice = user_input.next();
         
-        
-        
-        
-        
-        //String first_choice = user_input.next();
-       
-        lowerCheck = user_input.next().toLowerCase();  
-        
-        String first1 = lowerCheck.indexOf("corridor");
-        String first2 = "hallway";
-        
-        
-        
-        
-        if (lowerCheck.equals(first1))
+        String first = first_choice.toString();
+        */
+
+        String[] firstCheck = {"corridor"};
+        for (String s: firstCheck)
         {
+            if (s.toLowerCase().contains(lowerCheck))
+            {
+                System.out.println("");
+                System.out.println("You journey down the corridor.");
+            }
+        }
+     
+        /*
+        if (first_choice.equals("corridor") || first_choice.equals("hallway")){
             System.out.println("");
             System.out.println("You journey down the corridor.");
-            pathHallway();    
-        }
-        else if (lowerCheck.contains("hallway")){
+            wait(2000);
+            pathHallway(); 
+        } else if (first_choice.equals("crate")){
+            System.out.println("the crate is opened... ");
+            
             System.out.println("");
-            System.out.println("You journey down the hallway.");
-            pathHallway();
-        }
-    }
-        
-        
-        
-        
-        
-        /*
-        String text = user_input.next();
-        
-
-        List<String> tokens = new ArrayList<String>();
-        tokens.add("walk");
-        tokens.add("corridor");
-
-        String patternString = "\\b(" + StringUtils.join(tokens, "|") + ")\\b";
-        Pattern pattern = Pattern.compile(patternString);
-        Matcher matcher = pattern.matcher(text);
-
-        while (matcher.find()) {
-                System.out.println(matcher.group(1));
-        }
-       
-        
-        String first1 = "hallway";
-        String first2 = "walk";
-        String first3 = "corridor";
-        
-        
-        
-        if (((first_choice.toLowerCase()).indexOf(first1.toLowerCase()) != -1) || ((first_choice.toLowerCase()).indexOf(first2.toLowerCase()) != -1) || ((first_choice.toLowerCase()).indexOf(first3.toLowerCase()) != -1))
-        {
-            System.out.println("");
-            System.out.println("You journey down the hallway.");
-                
+            System.out.println("Further inspecting the crate, ");
+            System.out.println("you notice a handle for the");
+            System.out.println("lid of the crate. ");
+            System.out.println("/n");
+            System.out.println("Do you open the 'crate'? Or go down the 'corridor'?");
+            
+            String second_choice = user_input.next();
+            
+            
+            if(second_choice.equals("crate")){
+                pathOpenCrate();
+            } else if (second_choice.equals("corridor")){
+                System.out.println("");
+                System.out.println("You journey down the corridor.");
+                wait(2000);
+                pathHallway(); 
+            }
+        } else {
+            System.out.print("Please try again:");
+            first_choice = user_input.next();
         }
         */
+       
     }
+}
