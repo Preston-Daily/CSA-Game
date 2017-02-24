@@ -5,6 +5,7 @@ import java.awt.Font;
 import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import java.util.Random;
 
 public class allUfGam{
 
@@ -14,6 +15,9 @@ public class allUfGam{
     int playerDamage = 40;
     int itemAmount = 2;
     int playerAmbushed = 0;
+    
+    
+    
     public void health(int addedhealth){
         for(int i = 0; i > 0; i++){
            int health = 100;
@@ -23,9 +27,23 @@ public class allUfGam{
         }
     }
     
-    
-    
-    
+    public static  int rollDice(int number, int nSides) {
+        int num = 0;
+        if(nSides >=3)
+        {
+            for(int i = 0; i < number; i++){
+                Random  r = new Random(); 
+                int roll = r.nextInt();
+                num = num + (roll % nSides)+1;
+
+            }
+        }
+        else{
+            System.out.println("Error num needs to be from 3");
+
+        }
+        return num; 
+    } 
     
     
     
@@ -486,7 +504,6 @@ public class allUfGam{
     
         
     }
-    
     public void corridorMinusCrate(){
         
         //new question break-----------------------
@@ -879,12 +896,21 @@ public class allUfGam{
                     }
                 }
     }            
-   
+
     public void creatureAttacking(){
+        
+        int pHealth = 100;
+        
         for (int i = 100; i > 0;){
+            
+            int pDamage = rollDice(5, 6);
+            int mDamage = rollDice(4, 6);
+        
             System.out.println("Do you 'block' its attack?");
             System.out.println("Or do you 'attack' it?");
             String combatChoice = user_input.next();
+            
+            
             if ((combatChoice).equals("block")){
                 System.out.println("You block the creatures");
                 System.out.println("attack leaving it vunruble.");
@@ -893,22 +919,35 @@ public class allUfGam{
                 String combatFromBlock = user_input.next();
                 if ((combatFromBlock).equals("attack")){
                     System.out.println("You attack the creature");
-                    System.out.println("dealing " + weakplayerDamage + " damage.");
+                    System.out.println("dealing " + pDamage + " damage.");
                     System.out.println("");
                 }
             } else if ((combatChoice).equals("attack")){
                 System.out.println("You attack the creature");
                 System.out.println("and the creature attacks you!");
-                System.out.println("You deal " + weakplayerDamage + " damage!");
-                System.out.println("You loose " + hit + " health!");
+                System.out.println("You deal " + pDamage + " damage!");
+                System.out.println("You loose " + mDamage + " health!");
                 System.out.println("");
+                pHealth = pHealth - mDamage;
             }
-            i = i - weakplayerDamage;
-            System.out.println("The creature is now on " + i + " health");
+            
+            i = i - pDamage;
+            
+            System.out.println("(Creature health: " + i + ")");
+            System.out.println("(Your health: " + pHealth + ")");
             wait(4500);
             System.out.println("");
             System.out.println("");
-            System.out.println("The creature again starts to attack.");
+            if (pHealth <= 0){
+                youLose();
+            } else if ((pHealth >= 1) && (i >= 1)){
+                System.out.println("The creature again starts to attack.");
+            }
+            
+            pDamage = 0;
+            pDamage = rollDice(5, 6);
+            mDamage = 0;
+            mDamage = rollDice(4, 6);
         }
         for(int i = 0; i < 50; i++){
             System.out.println("\n");
@@ -924,9 +963,15 @@ public class allUfGam{
         
         
         for (int i = 100; i > 0;){
+             
+            int pDamage = rollDice(5, 6);
+            int mDamage = rollDice(4, 6);
+        
             System.out.println("Do you 'block' its attack?");
             System.out.println("Or do you 'attack' it?");
             String combatChoice = user_input.next();
+            
+            
             if ((combatChoice).equals("block")){
                 System.out.println("You block the creatures");
                 System.out.println("attack leaving it vunruble.");
@@ -935,22 +980,35 @@ public class allUfGam{
                 String combatFromBlock = user_input.next();
                 if ((combatFromBlock).equals("attack")){
                     System.out.println("You attack the creature");
-                    System.out.println("dealing " + weakplayerDamage + " damage.");
+                    System.out.println("dealing " + pDamage + " damage.");
                     System.out.println("");
                 }
             } else if ((combatChoice).equals("attack")){
                 System.out.println("You attack the creature");
                 System.out.println("and the creature attacks you!");
-                System.out.println("You deal " + weakplayerDamage + " damage!");
-                System.out.println("You loose " + hit + " health!");
+                System.out.println("You deal " + pDamage + " damage!");
+                System.out.println("You loose " + mDamage + " health!");
                 System.out.println("");
+                pHealth = pHealth - mDamage;
             }
-            i = i - weakplayerDamage;
-            System.out.println("The creature is now on " + i + " health");
+            
+            i = i - pDamage;
+            
+            System.out.println("(Creature health: " + i + ")");
+            System.out.println("(Your health: " + pHealth + ")");
             wait(4500);
             System.out.println("");
             System.out.println("");
-            System.out.println("The creature again starts to attack.");
+            if (pHealth <= 0){
+                youLose();
+            } else if ((pHealth >= 1) && (i >= 1)){
+                System.out.println("The creature again starts to attack.");
+            }
+            
+            pDamage = 0;
+            pDamage = rollDice(5, 6);
+            mDamage = 0;
+            mDamage = rollDice(4, 6);
         }
         for(int i = 0; i < 50; i++){
             System.out.println("\n");
@@ -1046,10 +1104,21 @@ public class allUfGam{
         }
     }
     public void combatHumanoids(){
+        
+        int pHealth = 100;
+        
+        
         for (int i = 100; i > 0;){
+            
+             
+            int pDamage = rollDice(10, 6);
+            int mDamage = rollDice(4, 6);
+        
             System.out.println("Do you 'block' its attack?");
             System.out.println("Or do you 'attack' it?");
             String combatChoice = user_input.next();
+            
+            
             if ((combatChoice).equals("block")){
                 System.out.println("You block the creatures");
                 System.out.println("attack leaving it vunruble.");
@@ -1058,24 +1127,39 @@ public class allUfGam{
                 String combatFromBlock = user_input.next();
                 if ((combatFromBlock).equals("attack")){
                     System.out.println("You attack the creature");
-                    System.out.println("dealing " + playerDamage + " damage.");
+                    System.out.println("dealing " + pDamage + " damage.");
                     System.out.println("");
                 }
             } else if ((combatChoice).equals("attack")){
                 System.out.println("You attack the creature");
                 System.out.println("and the creature attacks you!");
-                System.out.println("You deal " + playerDamage + " damage!");
-                System.out.println("You loose " + hit + " health!");
+                System.out.println("You deal " + pDamage + " damage!");
+                if (mDamage <= -1){
+                
+                }
+                System.out.println("You lose " + mDamage + " health!");
                 System.out.println("");
+                pHealth = pHealth - mDamage;
             }
-            i = i - playerDamage;
-            System.out.println("The creature is now on " + i + " health");
+            
+            i = i - pDamage;
+            
+            System.out.println("(Creature health: " + i + ")");
+            System.out.println("(Your health: " + pHealth + ")");
             wait(4500);
             System.out.println("");
             System.out.println("");
-            System.out.println("The creature again starts to attack.");
+            if (pHealth <= 0){
+                youLose();
+            } else if ((pHealth >= 1) && (i >= 1)){
+                System.out.println("The creature again starts to attack.");
+            }
+            
+            pDamage = 0;
+            pDamage = rollDice(10, 6);
+            mDamage = 0;
+            mDamage = rollDice(4, 6);
         }
-        
         for(int i = 0; i < 50; i++){
             System.out.println("\n");
         }
@@ -1088,10 +1172,18 @@ public class allUfGam{
         wait(4500);
         System.out.println("");
         
+        
         for (int i = 100; i > 0;){
+                    
+             
+            int pDamage = rollDice(10, 6);
+            int mDamage = rollDice(4, 6);
+        
             System.out.println("Do you 'block' its attack?");
             System.out.println("Or do you 'attack' it?");
             String combatChoice = user_input.next();
+            
+            
             if ((combatChoice).equals("block")){
                 System.out.println("You block the creatures");
                 System.out.println("attack leaving it vunruble.");
@@ -1100,27 +1192,42 @@ public class allUfGam{
                 String combatFromBlock = user_input.next();
                 if ((combatFromBlock).equals("attack")){
                     System.out.println("You attack the creature");
-                    System.out.println("dealing " + playerDamage + " damage.");
+                    System.out.println("dealing " + pDamage + " damage.");
                     System.out.println("");
                 }
             } else if ((combatChoice).equals("attack")){
                 System.out.println("You attack the creature");
                 System.out.println("and the creature attacks you!");
-                System.out.println("You deal " + playerDamage + " damage!");
-                System.out.println("You loose " + hit + " health!");
+                System.out.println("You deal " + pDamage + " damage!");
+                System.out.println("You loose " + mDamage + " health!");
                 System.out.println("");
+                pHealth = pHealth - mDamage;
             }
-            i = i - playerDamage;
-            System.out.println("The creature is now on " + i + " health");
+            
+            i = i - pDamage;
+            
+            System.out.println("(Creature health: " + i + ")");
+            System.out.println("(Your health: " + pHealth + ")");
             wait(4500);
             System.out.println("");
             System.out.println("");
-            System.out.println("The creature again starts to attack.");
+            if (pHealth <= 0){
+                youLose();
+            } else if ((pHealth >= 1) && (i >= 1)){
+                System.out.println("The creature again starts to attack.");
+            }
+            
+            pDamage = 0;
+            pDamage = rollDice(10, 6);
+            mDamage = 0;
+            mDamage = rollDice(4, 6);
         }
         for(int i = 0; i < 50; i++){
             System.out.println("\n");
         }
+        
         youWin();
+        
     }
     
     public void youWin(){
@@ -1135,6 +1242,21 @@ public class allUfGam{
         for (int i = 0; i <= 40000000; i++){
             System.out.println("========================================================================================================================================================================================================================================================================================================================================");
         }    
+    }
+    public void youLose(){
+        System.out.println("\n");
+        System.out.println("\n");
+        System.out.println("You Die!");
+        System.out.println("(Game over)");
+        System.out.println("\n");
+        System.out.println("\n");
+        
+        wait(3500);
+        
+        for (int i = 0; i <= 40000000; i++){
+            System.out.println("========================================================================================================================================================================================================================================================================================================================================");
+        }    
+    
     }
 }
 
