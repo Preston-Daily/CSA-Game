@@ -1,3 +1,5 @@
+package workInProgress;
+
 import java.util.Scanner;
 import java.io.*;
 import java.awt.BorderLayout;
@@ -27,6 +29,10 @@ public class allUfGam{
         }
     }
     
+    
+    
+    
+    
     public static  int rollDice(int number, int nSides) {
         int num = 0;
         if(nSides >=3)
@@ -42,8 +48,64 @@ public class allUfGam{
             System.out.println("Error num needs to be from 3");
 
         }
-        return num; 
+        if (num <= 0){
+            num = 0;
+            if(nSides >=3)
+            {
+                for(int i = 0; i < number; i++){
+                    Random  r = new Random(); 
+                    int roll = r.nextInt();
+                    num = num + (roll % nSides)+1;
+
+                }
+            }
+            else{
+                System.out.println("Error num needs to be from 3");
+
+            }
+            return num;
+        } else {
+            return num; 
+        }
     } 
+    public static  int mRollDice(int number, int nSides) {
+        int num = 0;
+        if(nSides >=3)
+        {
+            for(int i = 0; i < number; i++){
+                Random  r = new Random(); 
+                int roll = r.nextInt();
+                num = num + (roll % nSides)+1;
+
+            }
+        }
+        else{
+            System.out.println("Error num needs to be from 3");
+
+        }
+        if (num <= 0){
+            num = 0;
+            if(nSides >=3)
+            {
+                for(int i = 0; i < number; i++){
+                    Random  r = new Random(); 
+                    int roll = r.nextInt();
+                    num = num + (roll % nSides)+1;
+
+                }
+            }
+            else{
+                System.out.println("Error num needs to be from 3");
+
+            }
+            return num;
+        } else {
+            return num; 
+        }
+    } 
+    
+    
+    
     
     
     
@@ -331,12 +393,12 @@ public class allUfGam{
         System.out.println("Do you go down the 'corridor'? Or inspect the 'crate'?");
         
         
-        corridorOrCrate();
+        corridorOrCrate(user_name);
         
         
         
     }
-    public void corridorOrCrate(){
+    public void corridorOrCrate(String name){
         
         
         String[] firstOption = {"corridor"};
@@ -384,7 +446,7 @@ public class allUfGam{
                 System.out.println("(possibly to open the door)");
                 
                 
-                oppeningDoorOrInspect();
+                oppeningDoorOrInspect(name);
                 
                 
             }  
@@ -404,14 +466,14 @@ public class allUfGam{
                 System.out.println("openning of the crate.");
                 
                 
-                openOrCorridor();
+                openOrCorridor(name);
                 
                 
             }
         }
     }
     
-    public void openOrCorridor(){
+    public void openOrCorridor(String name){
         
     
         System.out.println("\n");
@@ -490,7 +552,7 @@ public class allUfGam{
                 }
                 for (String d: altcORsOption){
                     if (d.toLowerCase().contains(corridorSuicideChoice)){
-                        corridorMinusCrate();
+                        corridorMinusCrate(name);
                     }
                 }
                 
@@ -498,13 +560,13 @@ public class allUfGam{
         }
         for (String b: altsecondOption){
             if (b.toLowerCase().contains(secondChoice)){
-                corridorMinusCrate();
+                corridorMinusCrate(name);
             }
         }
     
         
     }
-    public void corridorMinusCrate(){
+    public void corridorMinusCrate(String name){
         
         //new question break-----------------------
         for (int i = 0; i <= 4; i++){
@@ -539,11 +601,11 @@ public class allUfGam{
         System.out.println("");
                 
                 
-        oppeningDoorOrInspect();
+        oppeningDoorOrInspect(name);
                 
                 
     }
-    public void oppeningDoorOrInspect(){
+    public void oppeningDoorOrInspect(String name){
         
         
         System.out.println("");
@@ -565,7 +627,7 @@ public class allUfGam{
                 //new question break-----------------------
                 
                 
-                oppeningDoorVinilla();
+                oppeningDoorVinilla(name);
                 
             }
         }
@@ -576,6 +638,19 @@ public class allUfGam{
                     System.out.println("========================================================================");
                 }    
                 //new question break-----------------------
+                
+                wait(2000);
+                System.out.println("");
+                System.out.println("(inspecting)");
+                wait(750);
+                System.out.print(". ");
+                wait(750);
+                System.out.print(". ");
+                wait(750);
+                System.out.print(". ");
+                wait(750);
+                System.out.println("");
+                
                 
                 System.out.println("Further inspecting the door");
                 System.out.println("you notice that the once");
@@ -588,12 +663,12 @@ public class allUfGam{
                 System.out.println("Do you 'search' for a weapon in the corridor?");
                 System.out.println("Or do you try to 'talk' to them?");
                 
-                searchOrTalk();
+                searchOrTalk(name);
                 
             }
         }
     } 
-    public void equipingItem(){
+    public void equipingItem(String name){
         
         String[] fifthOption = {"/equip1"};
         String[] altfifthOption = {"/equip2"};
@@ -617,7 +692,7 @@ public class allUfGam{
                 System.out.println("You equip the Pencil.");
                 System.out.println("");
                 
-                creatureAttacking();
+                creatureAttacking(name);
             }
         }
         for (String a: altfifthOption){
@@ -638,12 +713,12 @@ public class allUfGam{
                 System.out.println("You equip the Necklace.");
                 System.out.println("");
                 
-                creatureAttacking();
+                creatureAttacking(name);
                 
             }
         }
     }
-    public void searchOrTalk(){
+    public void searchOrTalk(String name){
         
         
         String[] fourthOption = {"search"};
@@ -659,7 +734,7 @@ public class allUfGam{
                 }    
                 //new question break-----------------------
                 
-                searchingBeforeDoor1();
+                searchingBeforeDoor1(name);
                 
                 
                     }
@@ -688,13 +763,13 @@ public class allUfGam{
                 wait(2000);
                 
                 
-                openDoorOrSearch();
+                openDoorOrSearch(name);
                 
                 
             }
         }
     }
-    public void oppeningDoorVinilla(){
+    public void oppeningDoorVinilla(String name){
             System.out.println("");
             System.out.println("(openning)");
             wait(1500);
@@ -743,11 +818,11 @@ public class allUfGam{
             System.out.println("(type '/equip' with the corresponding number of the item you want to equip.)");
             System.out.println("(Example: '/equip1')");
                 
-            equipingItem();
+            equipingItem(name);
                 
 
     }
-    public void openDoorOrSearch(){
+    public void openDoorOrSearch(String name){
         
         System.out.println("");
         System.out.println("");
@@ -764,19 +839,19 @@ public class allUfGam{
         for (String a: sixthOption){
             if (a.toLowerCase().contains(sixthChoice)){
                         
-                oppeningDoorVinilla();
+                oppeningDoorVinilla(name);
                             
             }
                 }
         for (String b: altsixthOption){
             if (b.toLowerCase().contains(sixthChoice)){
                         
-                searchingBeforeDoor1();
+                searchingBeforeDoor1(name);
                             
             }
         }
     }
-    public void searchingBeforeDoor1(){
+    public void searchingBeforeDoor1(String name){
      
                 System.out.println("You attempt to search for a weapon");
                 System.out.println("in the blackness of the corridor.");
@@ -827,7 +902,7 @@ public class allUfGam{
                         }    
                         //new question break-----------------------
                         
-                        entranceAfterSearching();
+                        entranceAfterSearching(name);
                         
                       
                     }
@@ -891,20 +966,20 @@ public class allUfGam{
                         }    
                         //new question break-----------------------
                         
-                        entranceAfterSearching();
+                        entranceAfterSearching(name);
                         
                     }
                 }
     }            
 
-    public void creatureAttacking(){
+    public void creatureAttacking(String name){
         
         int pHealth = 100;
         
         for (int i = 100; i > 0;){
             
             int pDamage = rollDice(5, 6);
-            int mDamage = rollDice(4, 6);
+            int mDamage = mRollDice(4, 6);
         
             System.out.println("Do you 'block' its attack?");
             System.out.println("Or do you 'attack' it?");
@@ -912,21 +987,43 @@ public class allUfGam{
             
             
             if ((combatChoice).equals("block")){
+                wait(1000);
+                System.out.println("");
+                System.out.println("");
+                
                 System.out.println("You block the creatures");
                 System.out.println("attack leaving it vunruble.");
                 System.out.println("");
                 System.out.println("Do you 'attack'?");
                 String combatFromBlock = user_input.next();
                 if ((combatFromBlock).equals("attack")){
+                    wait(1000);
+                    System.out.println("");
+                    System.out.println("");
+                
                     System.out.println("You attack the creature");
                     System.out.println("dealing " + pDamage + " damage.");
                     System.out.println("");
                 }
             } else if ((combatChoice).equals("attack")){
+                wait(1000);
+                System.out.println("");
+                System.out.println("");
+                
                 System.out.println("You attack the creature");
                 System.out.println("and the creature attacks you!");
                 System.out.println("You deal " + pDamage + " damage!");
-                System.out.println("You loose " + mDamage + " health!");
+                if (mDamage == 0){
+                    System.out.println("The creature misses his swing!");
+                    System.out.println("The creature deals no damage!");
+                    wait(2000);
+                } else if (mDamage < 0){
+                    System.out.println("In an attempt to heal itself");
+                    System.out.println("The creature deals " + mDamage + " damage!");
+                    wait(2000);
+                } else {
+                    System.out.println("The creature deals " + mDamage + " damage!");
+                }
                 System.out.println("");
                 pHealth = pHealth - mDamage;
             }
@@ -939,15 +1036,23 @@ public class allUfGam{
             System.out.println("");
             System.out.println("");
             if (pHealth <= 0){
-                youLose();
+                wait(3000);
+                youLose(name);
             } else if ((pHealth >= 1) && (i >= 1)){
+                //new question break-----------------------
+                for (int p = 0; p <= 4; p++){
+                    System.out.println("========================================================================");
+                }    
+                //new question break-----------------------
+                System.out.println("");
                 System.out.println("The creature again starts to attack.");
+                System.out.println("");
             }
             
             pDamage = 0;
             pDamage = rollDice(5, 6);
             mDamage = 0;
-            mDamage = rollDice(4, 6);
+            mDamage = mRollDice(4, 6);
         }
         for(int i = 0; i < 50; i++){
             System.out.println("\n");
@@ -963,9 +1068,9 @@ public class allUfGam{
         
         
         for (int i = 100; i > 0;){
-             
+            
             int pDamage = rollDice(5, 6);
-            int mDamage = rollDice(4, 6);
+            int mDamage = mRollDice(4, 6);
         
             System.out.println("Do you 'block' its attack?");
             System.out.println("Or do you 'attack' it?");
@@ -973,21 +1078,43 @@ public class allUfGam{
             
             
             if ((combatChoice).equals("block")){
+                wait(1000);
+                System.out.println("");
+                System.out.println("");
+                
                 System.out.println("You block the creatures");
                 System.out.println("attack leaving it vunruble.");
                 System.out.println("");
                 System.out.println("Do you 'attack'?");
                 String combatFromBlock = user_input.next();
                 if ((combatFromBlock).equals("attack")){
+                    wait(1000);
+                    System.out.println("");
+                    System.out.println("");
+                
                     System.out.println("You attack the creature");
                     System.out.println("dealing " + pDamage + " damage.");
                     System.out.println("");
                 }
             } else if ((combatChoice).equals("attack")){
+                wait(1000);
+                System.out.println("");
+                System.out.println("");
+                
                 System.out.println("You attack the creature");
                 System.out.println("and the creature attacks you!");
                 System.out.println("You deal " + pDamage + " damage!");
-                System.out.println("You loose " + mDamage + " health!");
+                if (mDamage == 0){
+                    System.out.println("The creature misses his swing!");
+                    System.out.println("The creature deals no damage!");
+                    wait(2000);
+                } else if (mDamage < 0){
+                    System.out.println("In an attempt to heal itself");
+                    System.out.println("The creature deals " + mDamage + " damage!");
+                    wait(2000);
+                } else {
+                    System.out.println("The creature deals " + mDamage + " damage!");
+                }
                 System.out.println("");
                 pHealth = pHealth - mDamage;
             }
@@ -1000,26 +1127,34 @@ public class allUfGam{
             System.out.println("");
             System.out.println("");
             if (pHealth <= 0){
-                youLose();
+                wait(3000);
+                youLose(name);
             } else if ((pHealth >= 1) && (i >= 1)){
+                //new question break-----------------------
+                for (int p = 0; p <= 4; p++){
+                    System.out.println("========================================================================");
+                }    
+                //new question break-----------------------
+                System.out.println("");
                 System.out.println("The creature again starts to attack.");
+                System.out.println("");
             }
             
             pDamage = 0;
             pDamage = rollDice(5, 6);
             mDamage = 0;
-            mDamage = rollDice(4, 6);
+            mDamage = mRollDice(4, 6);
         }
         for(int i = 0; i < 50; i++){
             System.out.println("\n");
         }
         
-        youWin();
+        youWin(name);
         
     }
     
     
-    public void entranceAfterSearching(){
+    public void entranceAfterSearching(String name){
         System.out.println("");
         System.out.println("");
         System.out.println("Do you 'forcibly' bust into the room?");
@@ -1060,7 +1195,7 @@ public class allUfGam{
                 System.out.println("");
                 
                 
-                combatHumanoids();
+                combatHumanoids(name);
                 
                 
             }
@@ -1097,22 +1232,21 @@ public class allUfGam{
         
                 
                 
-                combatHumanoids();
+                combatHumanoids(name);
                 
                 
             }
         }
     }
-    public void combatHumanoids(){
+    public void combatHumanoids(String name){
         
         int pHealth = 100;
         
         
         for (int i = 100; i > 0;){
             
-             
             int pDamage = rollDice(10, 6);
-            int mDamage = rollDice(4, 6);
+            int mDamage = mRollDice(4, 6);
         
             System.out.println("Do you 'block' its attack?");
             System.out.println("Or do you 'attack' it?");
@@ -1120,24 +1254,43 @@ public class allUfGam{
             
             
             if ((combatChoice).equals("block")){
+                wait(1000);
+                System.out.println("");
+                System.out.println("");
+                
                 System.out.println("You block the creatures");
                 System.out.println("attack leaving it vunruble.");
                 System.out.println("");
                 System.out.println("Do you 'attack'?");
                 String combatFromBlock = user_input.next();
                 if ((combatFromBlock).equals("attack")){
+                    wait(1000);
+                    System.out.println("");
+                    System.out.println("");
+                
                     System.out.println("You attack the creature");
                     System.out.println("dealing " + pDamage + " damage.");
                     System.out.println("");
                 }
             } else if ((combatChoice).equals("attack")){
+                wait(1000);
+                System.out.println("");
+                System.out.println("");
+                
                 System.out.println("You attack the creature");
                 System.out.println("and the creature attacks you!");
                 System.out.println("You deal " + pDamage + " damage!");
-                if (mDamage <= -1){
-                
+                if (mDamage == 0){
+                    System.out.println("The creature misses his swing!");
+                    System.out.println("The creature deals no damage!");
+                    wait(2000);
+                } else if (mDamage < 0){
+                    System.out.println("In an attempt to heal itself");
+                    System.out.println("The creature deals " + mDamage + " damage!");
+                    wait(2000);
+                } else {
+                    System.out.println("The creature deals " + mDamage + " damage!");
                 }
-                System.out.println("You lose " + mDamage + " health!");
                 System.out.println("");
                 pHealth = pHealth - mDamage;
             }
@@ -1150,15 +1303,23 @@ public class allUfGam{
             System.out.println("");
             System.out.println("");
             if (pHealth <= 0){
-                youLose();
+                wait(3000);
+                youLose(name);
             } else if ((pHealth >= 1) && (i >= 1)){
+                //new question break-----------------------
+                for (int p = 0; p <= 4; p++){
+                    System.out.println("========================================================================");
+                }    
+                //new question break-----------------------
+                System.out.println("");
                 System.out.println("The creature again starts to attack.");
+                System.out.println("");
             }
             
             pDamage = 0;
             pDamage = rollDice(10, 6);
             mDamage = 0;
-            mDamage = rollDice(4, 6);
+            mDamage = mRollDice(4, 6);
         }
         for(int i = 0; i < 50; i++){
             System.out.println("\n");
@@ -1174,10 +1335,9 @@ public class allUfGam{
         
         
         for (int i = 100; i > 0;){
-                    
-             
+            
             int pDamage = rollDice(10, 6);
-            int mDamage = rollDice(4, 6);
+            int mDamage = mRollDice(4, 6);
         
             System.out.println("Do you 'block' its attack?");
             System.out.println("Or do you 'attack' it?");
@@ -1185,21 +1345,42 @@ public class allUfGam{
             
             
             if ((combatChoice).equals("block")){
+                wait(1000);
+                System.out.println("");
+                System.out.println("");
+                
                 System.out.println("You block the creatures");
                 System.out.println("attack leaving it vunruble.");
                 System.out.println("");
                 System.out.println("Do you 'attack'?");
                 String combatFromBlock = user_input.next();
                 if ((combatFromBlock).equals("attack")){
+                    System.out.println("");
+                    System.out.println("");
+                    wait(1000);
                     System.out.println("You attack the creature");
                     System.out.println("dealing " + pDamage + " damage.");
                     System.out.println("");
                 }
             } else if ((combatChoice).equals("attack")){
+                wait(1000);
+                System.out.println("");
+                System.out.println("");
+                
                 System.out.println("You attack the creature");
                 System.out.println("and the creature attacks you!");
                 System.out.println("You deal " + pDamage + " damage!");
-                System.out.println("You loose " + mDamage + " health!");
+                if (mDamage == 0){
+                    System.out.println("The creature misses his swing!");
+                    System.out.println("The creature deals no damage!");
+                    wait(2000);
+                } else if (mDamage < 0){
+                    System.out.println("In an attempt to heal itself");
+                    System.out.println("The creature deals " + mDamage + " damage!");
+                    wait(2000);
+                } else {
+                    System.out.println("The creature deals " + mDamage + " damage!");
+                }
                 System.out.println("");
                 pHealth = pHealth - mDamage;
             }
@@ -1212,28 +1393,38 @@ public class allUfGam{
             System.out.println("");
             System.out.println("");
             if (pHealth <= 0){
-                youLose();
+                wait(3000);
+                youLose(name);
             } else if ((pHealth >= 1) && (i >= 1)){
+                //new question break-----------------------
+                for (int p = 0; p <= 4; p++){
+                    System.out.println("========================================================================");
+                }    
+                //new question break-----------------------
+                System.out.println("");
                 System.out.println("The creature again starts to attack.");
+                System.out.println("");
             }
             
             pDamage = 0;
             pDamage = rollDice(10, 6);
             mDamage = 0;
-            mDamage = rollDice(4, 6);
+            mDamage = mRollDice(4, 6);
         }
         for(int i = 0; i < 50; i++){
             System.out.println("\n");
         }
         
-        youWin();
+        youWin(name);
         
     }
     
-    public void youWin(){
+    public void youWin(String name){
+        
         System.out.println("\n");
         System.out.println("\n");
         System.out.println("Congrats!");
+        System.out.println("(You Win!)");
         System.out.println("\n");
         System.out.println("\n");
         
@@ -1241,9 +1432,18 @@ public class allUfGam{
         
         for (int i = 0; i <= 40000000; i++){
             System.out.println("========================================================================================================================================================================================================================================================================================================================================");
+            if ((i % 10) == 0){
+                for (int t = 0; t <= 10; t++){
+                    System.out.println("================ajksldhfliaushdfiuashdfiuashdfiuhasdfiuhasidufhiasdf===========================================================================================================================================================================================================================================================");
+                }
+            }
         }    
+        
+      
     }
-    public void youLose(){
+  
+    
+    public void youLose(String name){
         System.out.println("\n");
         System.out.println("\n");
         System.out.println("You Die!");
